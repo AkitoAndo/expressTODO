@@ -14,7 +14,7 @@ module.exports = {
           date: "2020-02-02 00:00:00",
           done: "check",
           createdAt: new Date(),
-          updatedAt: new Date()
+          updatedAt: new Date(),
         },
       ],
       {}

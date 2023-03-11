@@ -40,7 +40,7 @@ const model = {
       await Task.sequelize.transaction(async (t) => {
         await Task.update(
           {
-            done: "done"
+            done: "done",
           },
           {
             where: {

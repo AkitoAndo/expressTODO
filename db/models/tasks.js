@@ -29,7 +29,7 @@ module.exports = (sequelize, DataTypes) => {
       done: {
         type: DataTypes.TEXT,
         defaultValue: "check",
-      }
+      },
     },
     {
       sequelize,
