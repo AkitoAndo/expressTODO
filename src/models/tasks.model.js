@@ -18,7 +18,24 @@ const model = {
       console.log(err);
       return err;
     }
-  },updateTask: async (req, res) => {
+  },
+  deleteTask: async (req, res) => {
+    try {
+      await Task.sequelize.transaction(async (t) => {
+        const inputId = req.body.id;
+        await Task.destroy({
+          where: {
+            id: inputId,
+          },
+        });
+        res.redirect("/");
+      });
+    } catch (err) {
+      console.log(err);
+      return err;
+    }
+  },
+  updateTask: async (req, res) => {
     try {
       await Task.sequelize.transaction(async (t) => {
         await Task.update(
