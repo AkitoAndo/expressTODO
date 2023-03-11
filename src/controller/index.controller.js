@@ -6,5 +6,6 @@ const model = require("../models/tasks.model");
 
 router.route("/").get(main.tasklist);
 
-router.post("/add,model.addTask");
+router.post("/add", model.addTask);
+
 module.exports = router;

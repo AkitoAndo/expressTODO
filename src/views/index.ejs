@@ -25,6 +25,46 @@
         </div>
       </nav>
     </div>
+    <div class="container py-5 position-relative">
+      <div class="justify-content-center align-items-center">
+        <div
+          class="shadow p-3"
+          style="border-radius: 0.75rem; background-color: #eff1f2"
+        >
+          <h4 class="text-dark" style="font-family: 'Arial'">ADD TASK</h4>
+          <div class="pb-2">
+            <form action="/index/add" method="post" class="needs-validation">
+              <div>
+                <label for="task" class="form-label">task name</label>
+                <div class="row mb-2">
+                  <div class="col-md-4">
+                    <input
+                      id="task"
+                      name="task"
+                      class="form-control"
+                      required
+                    />
+                  </div>
+                </div>
+                <label class="form-label">deadline</label>
+                <div class="row mb-3">
+                  <div class="col-md-4">
+                    <input
+                      name="date"
+                      type="datetime-local"
+                      class="form-control"
+                      required
+                    />
+                  </div>
+                </div>
+                <button class="btn btn-outline-dark">send</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="container position-relative">
       <div
         class="shadow p-3"
