@@ -33,7 +33,7 @@
         >
           <h4 class="text-dark" style="font-family: 'Arial'">ADD TASK</h4>
           <div class="pb-2">
-            <form action="/index/add" method="post" class="needs-validation">
+            <form action="/index/create" method="post" class="needs-validation">
               <div>
                 <label for="task" class="form-label">task name</label>
                 <div class="row mb-2">
@@ -91,7 +91,7 @@
 
                   <td class="align-middle row row-cols-auto">
                     <div class="col">
-                      <form action="/tasks/check" method="post">
+                      <form action="/index/update" method="post">
                         <input
                           type="hidden"
                           name="id"
@@ -103,7 +103,7 @@
                       </form>
                     </div>
                     <div class="col">
-                      <form action="/tasks/delete" method="post">
+                      <form action="/index/delete" method="post">
                         <input
                           type="hidden"
                           name="id"
