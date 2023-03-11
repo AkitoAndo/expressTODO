@@ -9,5 +9,6 @@ router.route("/").get(main.tasklist);
 router.post("/create", model.addTask);
 router.post("/update", model.updateTask);
 router.post("/delete", model.deleteTask);
+router.post("/init", model.initTable);
 
 module.exports = router;
