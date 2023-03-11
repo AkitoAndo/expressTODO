@@ -55,6 +55,19 @@ const model = {
       return err;
     }
   },
+  initTable: async (req, res) => {
+    try {
+      await Task.sequelize.transaction(async (t) => {
+        await Task.destroy({
+          truncate: true,
+        });
+        res.redirect("/");
+      });
+    } catch (err) {
+      console.log(err);
+      return err;
+    }
+  },
 };
 
 module.exports = model;
