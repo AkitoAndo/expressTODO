@@ -1,19 +1,20 @@
 // app.js
 "use strict";
 
-const express = require('express')
+const express = require("express");
 
-const app = express()
+const indexRouter = require("./controller/index.controller.js");
+
+const app = express();
 app.set("view engine", "ejs");
 app.set("views", "./src/views");
 app.use(express.static("./src/public"));
+app.use(express.urlencoded({extended: true }));
 
-const port = 3000
+app.use("/index", indexRouter);
 
-app.get('/', (req, res) => {
-  res.render("index");
-})
+app.get("/", (req, res) => {
+  res.redirect("/index");
+});
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+module.exports = app;
