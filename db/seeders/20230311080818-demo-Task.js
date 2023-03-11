@@ -11,8 +11,10 @@ module.exports = {
         {
           id: 0,
           name: "task1",
-          limit: "2020-02-02 00:00:00",
-          done: "done",
+          date: "2020-02-02 00:00:00",
+          done: "check",
+          createdAt: new Date(),
+          updatedAt: new Date()
         },
       ],
       {}

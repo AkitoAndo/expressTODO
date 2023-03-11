@@ -22,14 +22,14 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.TEXT,
         defaultValue: "None",
       },
-      limit: {
+      date: {
         type: DataTypes.DATE,
         defaultValue: "None",
       },
       done: {
         type: DataTypes.TEXT,
-        defaultValue: "None",
-      },
+        defaultValue: "check",
+      }
     },
     {
       sequelize,

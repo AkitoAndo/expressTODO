@@ -12,12 +12,20 @@ module.exports = {
       name: {
         type: Sequelize.TEXT,
       },
-      limit: {
+      date: {
         type: Sequelize.DATE,
       },
       done: {
         type: Sequelize.TEXT,
       },
+      createdAt: {
+        allowNull: false,
+        type: Sequelize.DATE
+      },
+      updatedAt: {
+        allowNull: false,
+        type: Sequelize.DATE
+      }
     });
   },
   async down(queryInterface, Sequelize) {
